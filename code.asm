@@ -1,7 +1,7 @@
 section .data 
-    msg db 'I love kill my homies!', 0xA
+    msg db 'How can someone hate a language!', 0xA
     tam equ $- msg
-    ms1 db 'I will kill my self', 0xA
+    ms1 db 'I hate ASM', 0xA
     tam2 equ $- ms1
     ms2 db 'I love ASM', 0xA
     tam3 equ $- ms2
