@@ -1,14 +1,12 @@
-section .data //constantes
-    msg db 'Hello World!', 0xA
+section .data 
+    msg db 'Hello World', 0xA
     tam equ $- msg
 
-section .bss //variaveis
-
+section .bss 
 
 section .text
 
-global _start //label/ponto de inicio do programa chamado _start (obrigatório)
-
+global _start
 _start:
     mov eax, 0x4
     mov ebx, 0x1
@@ -18,6 +16,6 @@ _start:
 
     mov eax, 0x1 ; terminando o programa
     mov ebx, 0x0 ; saida
-    int 0x80 //processa a informação kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+    int 0x80
 
 
