@@ -1,6 +1,10 @@
 section .data 
-    msg db 'Hello World', 0xA
+    msg db 'I love kill my homies!', 0xA
     tam equ $- msg
+    ms1 db 'I will kill my self', 0xA
+    tam2 equ $- ms1
+    ms2 db 'I love ASM', 0xA
+    tam3 equ $- ms2
 
 section .bss 
 
@@ -14,8 +18,19 @@ _start:
     mov edx, tam 
     int 0x80
 
-    mov eax, 0x1 ; terminando o programa
-    mov ebx, 0x0 ; saida
+    mov eax, 0x4
+    mov ebx, 0x1
+    mov ecx, ms1
+    mov edx, tam2
     int 0x80
-
+    
+    mov eax, 0x4
+    mov ebx, 0x1
+    mov ecx, ms2
+    mov edx, tam3
+    int 0x80
+    
+    mov eax, 0x1
+    mov ebx, 0x0
+    int 0x80
 
